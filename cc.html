@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caeser Cipher</title>
+    <link rel="stylesheet" href="cc.css">
+</head>
+<body>
+    <div class="container">
+        <h1 style="color: #c8c8c8;">Caeser Cipher</h1>
+		
+		<div id="input-head" class="io-head">Plain</div>
+        <textarea id="inputText" placeholder="enter plaintext"></textarea>
+		
+        <button onclick="switchTexts()" title="Swap">
+			<img src="switch button.png" width="20" height="20">
+		</button>
+		
+		<div id="output-head" class="io-head">Cipher</div>
+        <div id="output"></div>
+		
+		<div class="text-buttons-bar">
+			<button id="copy-button" onclick="copyOutput()" style="min-width: 75px; min-height: 50px" title="Copy ciphertext">
+				<img src="copy button.png" alt="copy" width="20px" height="24px">
+			</button>
+			<button id="clear-button" onclick="clearTexts()" style="min-width: 75px; min-height: 50px" title="Clear text">
+				<img src="clear button.png" alt="copy" width="26px" height="20px">
+			</button>
+		</div>
+    </div>
+	<div id="separator-bar"></div>
+    <div class="options-container">
+		<label for="input-key" id="h">Key:</label>
+		<input type="number" id="input-key" min="1" max="25" step="1" value="3">
+		<p id="key-range-error"></p>
+    </div>
+	
+    <script src="cc.js"></script>
+</body>
+</html>
